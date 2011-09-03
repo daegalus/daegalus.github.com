@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Loudberry Development</title>
+  <link href="http://daegalus.github.com//atom.xml" rel="self"/>
+  <link href="http://daegalus.github.com//"/>
+  <updated>2011-09-03T02:51:43-07:00</updated>
+  <id>http://daegalus.github.com//</id>
+  <author>
+    <name>Yulian Kuncheff</name>
+    
+  </author>
+
+  
+  <entry>
+    <title>Blogging, I can never get into this</title>
+    <link href="http://daegalus.github.com//blog/2011/09/03/blogging/"/>
+    <updated>2011-09-03T01:35:00-07:00</updated>
+    <id>http://daegalus.github.com//blog/2011/09/03/blogging</id>
+    <content type="html">&lt;p&gt;Well, I am going to take a swing at blogging once more. I have tried a few times, but I can just never get it right. Hopefully this time around I can be active about it and maybe write something useful. If not, I can just put another grave in my &quot;Things that just don't work for me&quot; box alongside Facebook.&lt;/p&gt;
+
+&lt;p&gt;I will most likely stick to technological/programming articles here, but there might be a few occasional ones that are just completely unrelated, but those will be filed under the appropriate tags.&lt;/p&gt;
+
+&lt;p&gt;I am also a gamer, so most of my other stuff might be related to gaming or something.&lt;/p&gt;
+
+&lt;p&gt;Hope this works out better than last time.&lt;/p&gt;
+
+&lt;p&gt;P.S. Just a test of syntax highlighted code on some Node.js stuff:&lt;/p&gt;
+
+&lt;p&gt;``` js&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var http = require('http');
+var server = http.createServer(function(req,res) {
+  res.writeHead(200);
+  res.end('Hello World');
+});
+server.listen(8124);
+
+var hello = require('./hello');
+hello.world();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+</content>
+  </entry>
+  
+</feed>
