@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://daegalus.github.com/
+title: Loudberry Development
+subtitle: Random rants, tutorials, and information from development, and maybe other things.
+author: Yulian Kuncheff
 simple_search: http://google.com/search
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
@@ -49,7 +49,7 @@ default_asides: [asides/recent_posts.html, asides/twitter.html, asides/delicious
 # ----------------------- #
 
 # Twitter
-twitter_user:
+twitter_user: Daegalus
 twitter_tweet_count: 4
 twitter_show_replies: false
 twitter_follow_button: true
@@ -69,7 +69,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: loudberry
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-25507090-1
