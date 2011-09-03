@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Blogging, I can never get into this"
+date: 2011-09-03 01:35
+comments: true
+categories: [Random, Non-developement]
+---
+Well, I am going to take a swing at blogging once more. I have tried a few times, but I can just never get it right. Hopefully this time around I can be active about it and maybe write something useful. If not, I can just put another grave in my "Things that just don't work for me" box alongside Facebook.
+
+I will most likely stick to technological/programming articles here, but there might be a few occasional ones that are just completely unrelated, but those will be filed under the appropriate tags.
+
+I am also a gamer, so most of my other stuff might be related to gaming or something.
+
+Hope this works out better than last time.
+
+P.S. Just a test of syntax highlighted code on some Node.js stuff:
+
+``` js
+	var http = require('http');
+	var server = http.createServer(function(req,res) {
+	  res.writeHead(200);
+	  res.end('Hello World');
+	});
+	server.listen(8124);
+
+	var hello = require('./hello');
+	hello.world();
+```
