@@ -1,16 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title>Loudberry Development</title>
+  <title>Loudberry</title>
   <link href="http://daegalus.github.com//atom.xml" rel="self"/>
   <link href="http://daegalus.github.com//"/>
-  <updated>2011-09-03T02:51:43-07:00</updated>
+  <updated>2011-09-04T01:06:46-07:00</updated>
   <id>http://daegalus.github.com//</id>
   <author>
     <name>Yulian Kuncheff</name>
     
   </author>
 
+  
+  <entry>
+    <title>Using Agile for Personal Project Management</title>
+    <link href="http://daegalus.github.com//blog/2011/09/04/using-agile-for-personal-project-management/"/>
+    <updated>2011-09-04T00:53:00-07:00</updated>
+    <id>http://daegalus.github.com//blog/2011/09/04/using-agile-for-personal-project-management</id>
+    <content type="html">&lt;p&gt;My internship experience at EA this last summer has given me a new experience with Agile/Scrum development. Because it was incorporated so well into the developement process of what I was working on, it really made a great impression to me.&lt;/p&gt;
+
+&lt;p&gt;Now that I am no longer working there and come back to my own projects, I have found I have way too many ideas, way too many projects, and I was all over the place with them. This eventually makes me complacent and I never get anything finished.&lt;/p&gt;
+
+&lt;p&gt;So I decided that I would incorporate Agile into my personal development flow. I recently bought most of the Atlassian software, and seeing as how it was for personal use, $10 per product wasn't that expensive. So I got JIRA, Bamboo, Greenhopper, etc. And set them all up. The tool that I was looking forward to using the most was Greenhopper, their Agile management tool. My plan was to setup all my projects, and begin managing my time in sprints and stories.&lt;/p&gt;
+
+&lt;p&gt;After about a month of doing this, I have found that it works tremendously well. I have basic stories for getting bits and pieces done, and I gave myself 2 weeks to do them. 1.5 for coding, .5 for testing. Reason I gave myself such a big sprint is because I have to juggle college classes along with all of this, and giving myself plenty of time to knockout a few functions or classes works well.&lt;/p&gt;
+
+&lt;p&gt;So I am mostly using this as a method to get organized. If I stick to it, it works. I am getting a lot of work done on my projects, and I can monitor how much I am completing and how quickly. In a lot of cases, I had extra time, so I started work on other features, and even knocked out 2-3 stories in a sprint.&lt;/p&gt;
+
+&lt;p&gt;While this seems like an overly complex setup for a single developer, to-do lists, and just random jots never work for me and I have completed more coding towards my projects in the last month, than I have in the 6 months prior to that.&lt;/p&gt;
+
+&lt;p&gt;So if you are having trouble getting stuff done, find a free Agile management tool, or buy a cheap one, and get yourself setup and organized through it.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Node.js Is Interesting Stuff</title>
+    <link href="http://daegalus.github.com//blog/2011/09/04/node-dot-js-is-interesting-stuff/"/>
+    <updated>2011-09-04T00:43:00-07:00</updated>
+    <id>http://daegalus.github.com//blog/2011/09/04/node-dot-js-is-interesting-stuff</id>
+    <content type="html">&lt;p&gt;I have recently jumped onto the Node.js bandwagon after finally deciding to see what it was all about. And after a few test scripts, I think I know what I am going to be using for my future REST/Web projects.&lt;/p&gt;
+
+&lt;p&gt;From my limited amount of usage, its fast. Responses to my calls came back quickly and everything worked great with little overhead on my linux box. Not to mention my linux box is an old emachines laptop with 2gigs of ram, and an old AMD 64bit processor. I've setup quite a bit on it, and it finally crapped out when I started installing a slew of Atlassian products on it. Those really bogged it downa dn I could barely get anything to load decently. Plus it took 10-15 seconds for it to send a response back.&lt;/p&gt;
+
+&lt;p&gt;Obviously this isn't an all too serious metric, since it is an old machine, but I am looking forward to writing as much as possible with Node.js for the services and games I plan to write.&lt;/p&gt;
+
+&lt;p&gt;Not to mention I enjoy using MongoDB and its Geospatial features. MongoDB works exteremely well with Node.js, so it is a great combination.&lt;/p&gt;
+
+&lt;p&gt;At first I thought all this Node.js stuff was something dumb, because I am not a fan of Javascript and all this AJAX craze that has been going on for the last few years. But I can say that after playing around with Node.js for a while, it is fun to code for, and it works well. If you haven't given it a try, be sure to do so.&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Blogging, I can never get into this</title>
