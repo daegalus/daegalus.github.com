@@ -4,7 +4,7 @@
   <title>Loudberry</title>
   <link href="http://daegalus.github.com//atom.xml" rel="self"/>
   <link href="http://daegalus.github.com//"/>
-  <updated>2011-09-04T01:06:46-07:00</updated>
+  <updated>2011-09-04T01:20:30-07:00</updated>
   <id>http://daegalus.github.com//</id>
   <author>
     <name>Yulian Kuncheff</name>
@@ -17,7 +17,7 @@
     <link href="http://daegalus.github.com//blog/2011/09/04/using-agile-for-personal-project-management/"/>
     <updated>2011-09-04T00:53:00-07:00</updated>
     <id>http://daegalus.github.com//blog/2011/09/04/using-agile-for-personal-project-management</id>
-    <content type="html">&lt;p&gt;My internship experience at EA this last summer has given me a new experience with Agile/Scrum development. Because it was incorporated so well into the developement process of what I was working on, it really made a great impression to me.&lt;/p&gt;
+    <content type="html">&lt;p&gt;My internship experience at EA this last summer has given me a new experience with Agile/Scrum development. Because it was incorporated so well into the development process of what I was working on, it really made a great impression to me.&lt;/p&gt;
 
 &lt;p&gt;Now that I am no longer working there and come back to my own projects, I have found I have way too many ideas, way too many projects, and I was all over the place with them. This eventually makes me complacent and I never get anything finished.&lt;/p&gt;
 
@@ -36,15 +36,15 @@
   <entry>
     <title>Node.js Is Interesting Stuff</title>
     <link href="http://daegalus.github.com//blog/2011/09/04/node-dot-js-is-interesting-stuff/"/>
-    <updated>2011-09-04T00:43:00-07:00</updated>
+    <updated>2011-09-04T00:13:00-07:00</updated>
     <id>http://daegalus.github.com//blog/2011/09/04/node-dot-js-is-interesting-stuff</id>
     <content type="html">&lt;p&gt;I have recently jumped onto the Node.js bandwagon after finally deciding to see what it was all about. And after a few test scripts, I think I know what I am going to be using for my future REST/Web projects.&lt;/p&gt;
 
-&lt;p&gt;From my limited amount of usage, its fast. Responses to my calls came back quickly and everything worked great with little overhead on my linux box. Not to mention my linux box is an old emachines laptop with 2gigs of ram, and an old AMD 64bit processor. I've setup quite a bit on it, and it finally crapped out when I started installing a slew of Atlassian products on it. Those really bogged it downa dn I could barely get anything to load decently. Plus it took 10-15 seconds for it to send a response back.&lt;/p&gt;
+&lt;p&gt;From my limited amount of usage, its fast. Responses to my calls came back quickly and everything worked great with little overhead on my linux box. Not to mention my linux box is an old emachines laptop with 2gigs of ram, and an old AMD 64bit processor. I've setup quite a bit on it, and it finally crapped out when I started installing a slew of Atlassian products on it. Those really bogged it down and I could barely get anything to load decently. Plus it took 10-15 seconds for it to send a response back.&lt;/p&gt;
 
 &lt;p&gt;Obviously this isn't an all too serious metric, since it is an old machine, but I am looking forward to writing as much as possible with Node.js for the services and games I plan to write.&lt;/p&gt;
 
-&lt;p&gt;Not to mention I enjoy using MongoDB and its Geospatial features. MongoDB works exteremely well with Node.js, so it is a great combination.&lt;/p&gt;
+&lt;p&gt;Not to mention I enjoy using MongoDB and its Geospatial features. MongoDB works extremely well with Node.js, so it is a great combination.&lt;/p&gt;
 
 &lt;p&gt;At first I thought all this Node.js stuff was something dumb, because I am not a fan of Javascript and all this AJAX craze that has been going on for the last few years. But I can say that after playing around with Node.js for a while, it is fun to code for, and it works well. If you haven't given it a try, be sure to do so.&lt;/p&gt;
 </content>
