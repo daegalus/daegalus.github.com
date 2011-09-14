@@ -126,22 +126,22 @@
 <li><p>In OSX, make a Bootcamp Driver USB and set it aside.</p></li>
 <li><p>From another Windows install on another computer, or another partition, make a Bootable USB Installer for Windows 8. You can use the <a href="http://images2.store.microsoft.com/prod/clustera/framework/w7udt/1.0/en-us/Windows7-USB-DVD-tool.exe">Windows 7 DVD/USB Download Tool</a> or any other means.</p></li>
 <li><p>Run the Windows Installer from USB like you would do for Windows 7. The install process is almost 100% identical.</p></li>
-<li>Once it reboots, make sure that after you select Windows in the Mac bootloader, not to touch your keyboard. I have had it lockup a few times and had to do fresh installs. Just let it do its thing until you hit the License agreement.</li>
-<li>Now you will notice that the Screen is cut in half, and there are 2 copies of hte top half of your screen. This sadly is due to a buggy Windows 8 Intel HD 3000 driver. You will have to click randomly on the bottom of the screen till it switches to the next screen. This is pretty annoying. I tried tabbing through this, but I have no clue if there is a &#8220;Checkbox&#8221; or not down there. I just finally got it to move on.</li>
-<li>This problem will persist through a while, so you will have to use your knowledge of tabbing and windows shortcuts to move around, and a bit of mental image of how things can/are laid out.</li>
-<li>Once you get it all setup and boot in, you should be able to hit the Explorer shortcut or the Desktop tile.</li>
-<li>Once there plugin the USB or however you are storing the Orca editor, and install it onto the system.</li>
-<li>Once done, plug in the USB with Bootcamp Drivers.</li>
-<li>Open Orca, and browse into the &#8220;F:\WindowsSupport\Drivers\Apple&#8221; (Driver letter doesn&#8217;t matter, I am just picking something). Select the BootCamp or Bootcamp64.msi and open it.</li>
-<li>In the Tables column, scrolldown until you see &#8220;LaunchConditions&#8221; and select it.</li>
-<li>Look for a row that says &#8220;VersionNT=601&#8221; right-click it and drop row. If you have problems with it not seeing Mac partitions or not figuring out the system model properly, delete the last line with &#8220;SYSTEMMODELNAME&#8221; in the line.</li>
-<li>Save it.</li>
-<li>Now go to the folder, and run the MSI file directly. Wait till it does all its installs and so on.</li>
-<li>Now go back up one folder to WindowsSupport\Drivers and Go into every folder, and install all the drivers manually. If you know exactly what drivers you need, instll only those, otherwise just go through all of them, and ignore any &#8220;Errors&#8221; about missing hardware, or other info. I know for Macbook Airs, you can skip the IDT Sigmatel driver. Also for the time being, skip the Intel945, Intel965 install and, IntelHDGraphicsSetup. Others should install fine. If they say Unsupported OS, defer them till later.</li>
-<li>Once that is all done, take your favorite Archiver (WinRar, 7zip, whatever), and extract the IntelHDGraphicsSetup exe. It is a self extracting archive, so it just has the installer inside.</li>
-<li>Once extracted go to the &#8220;Graphics&#8221; folder, and open the file &#8220;2430-64p.ini&#8221; and scroll down until you see [IntelGfx.NTamd64.6.2] (yours might be a bit different if you are doing this on 32-bit). Under it there is a comment about &#8220;no install on Win8&#8221;. Directly below that you should see the one for 6.0 (win7/vista) copy all the lines below it, and paste them under the 6.2 category. Save it.</li>
-<li>Go up a folder, and run the Setup.exe. The this should being installing the Driver. If it asks you about downgrading the version, hit yes. When the popup saying it is unsigned, and so on pops up continue. Your display should fix up almost right away.</li>
-<li>From here, do the same process (roughly) to get the other Intel packages that you think you might need to install.</li>
+<li><p>Once it reboots, make sure that after you select Windows in the Mac bootloader, not to touch your keyboard. I have had it lockup a few times and had to do fresh installs. Just let it do its thing until you hit the License agreement.</p></li>
+<li><p>Now you will notice that the Screen is cut in half, and there are 2 copies of hte top half of your screen. This sadly is due to a buggy Windows 8 Intel HD 3000 driver. You will have to click randomly on the bottom of the screen till it switches to the next screen. This is pretty annoying. I tried tabbing through this, but I have no clue if there is a &#8220;Checkbox&#8221; or not down there. I just finally got it to move on.</p></li>
+<li><p>This problem will persist through a while, so you will have to use your knowledge of tabbing and windows shortcuts to move around, and a bit of mental image of how things can/are laid out.</p></li>
+<li><p>Once you get it all setup and boot in, you should be able to hit the Explorer shortcut or the Desktop tile.</p></li>
+<li><p>Once there plugin the USB or however you are storing the Orca editor, and install it onto the system.</p></li>
+<li><p>Once done, plug in the USB with Bootcamp Drivers.</p></li>
+<li><p>Open Orca, and browse into the &#8220;F:\WindowsSupport\Drivers\Apple&#8221; (Driver letter doesn&#8217;t matter, I am just picking something). Select the BootCamp or Bootcamp64.msi and open it.</p></li>
+<li><p>In the Tables column, scrolldown until you see &#8220;LaunchConditions&#8221; and select it.</p></li>
+<li><p>Look for a row that says &#8220;VersionNT=601&#8221; right-click it and drop row. If you have problems with it not seeing Mac partitions or not figuring out the system model properly, delete the last line with &#8220;SYSTEMMODELNAME&#8221; in the line.</p></li>
+<li><p>Save it.</p></li>
+<li><p>Now go to the folder, and run the MSI file directly. Wait till it does all its installs and so on.</p></li>
+<li><p>Now go back up one folder to WindowsSupport\Drivers and Go into every folder, and install all the drivers manually. If you know exactly what drivers you need, instll only those, otherwise just go through all of them, and ignore any &#8220;Errors&#8221; about missing hardware, or other info. I know for Macbook Airs, you can skip the IDT Sigmatel driver. Also for the time being, skip the Intel945, Intel965 install and, IntelHDGraphicsSetup. Others should install fine. If they say Unsupported OS, defer them till later.</p></li>
+<li><p>Once that is all done, take your favorite Archiver (WinRar, 7zip, whatever), and extract the IntelHDGraphicsSetup exe. It is a self extracting archive, so it just has the installer inside.</p></li>
+<li><p>Once extracted go to the &#8220;Graphics&#8221; folder, and open the file &#8220;2430-64p.ini&#8221; and scroll down until you see [IntelGfx.NTamd64.6.2] (yours might be a bit different if you are doing this on 32-bit). Under it there is a comment about &#8220;no install on Win8&#8221;. Directly below that you should see the one for 6.0 (win7/vista) copy all the lines below it, and paste them under the 6.2 category. Save it.</p></li>
+<li><p>Go up a folder, and run the Setup.exe. The this should being installing the Driver. If it asks you about downgrading the version, hit yes. When the popup saying it is unsigned, and so on pops up continue. Your display should fix up almost right away.</p></li>
+<li><p>From here, do the same process (roughly) to get the other Intel packages that you think you might need to install.</p></li>
 </ol>
 
 
