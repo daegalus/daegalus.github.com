@@ -4,13 +4,34 @@
   <title>Loudberry</title>
   <link href="http://daegalus.github.com//atom.xml" rel="self"/>
   <link href="http://daegalus.github.com//"/>
-  <updated>2011-09-14T01:13:59-07:00</updated>
+  <updated>2011-09-18T17:24:01-07:00</updated>
   <id>http://daegalus.github.com//</id>
   <author>
     <name>Yulian Kuncheff</name>
     
   </author>
 
+  
+  <entry>
+    <title>Windows 8 Battery Life</title>
+    <link href="http://daegalus.github.com//blog/2011/09/18/windows-8-battery-life/"/>
+    <updated>2011-09-18T17:13:00-07:00</updated>
+    <id>http://daegalus.github.com//blog/2011/09/18/windows-8-battery-life</id>
+    <content type="html">&lt;p&gt;So, one of the major claims that came out of Build this last week was their battery life claims and their new Connected Sleep mode. So using my Macbook Air in Windows 8 this last week and I have noticed something already. The battery savings are infact real. In a normal sleep it will not be connected to the internet, nor will it stay in sleep long. In many cases if you leave it in Sleep it will Hibernate after a while, or it will stay in sleep and burn battery, since the system is still active.&lt;/p&gt;
+
+&lt;p&gt;Well from what I have seen, Connected Sleep is amazing. I closed my laptop Friday afternoon, and haven't touched it since. I just flipped it open Sunday Night, it was already on, I slid up the lockscreen, and logged in. No wait, no boot up, just instant on. The kicker was that my battery was at 79% since Friday. So for 2 full days, I only lose 21% battery.&lt;/p&gt;
+
+&lt;p&gt;That is pretty major, especially when they are focusing on tablets. While using it, it will burn battery like any other, but when you flip off your tablet, it will go in to this state. And if it can last 2 Days and only burn 20% battery, I wonder how well it will fair on a tablet with general on/off use.&lt;/p&gt;
+
+&lt;p&gt;I am really surprised and excited about this. Microsoft finally figured out a great way to keep battery life up, while not sacrificing anything.&lt;/p&gt;
+
+&lt;p&gt;Also to boot, all my apps were not disconnected, my Skype had received all my messages I sent and received on my other computer and everything is as if it were never disconnected. They obviously also improved Sleep somehow because it is barely burning any battery.&lt;/p&gt;
+
+&lt;p&gt;Good stuff Microsoft. I am loving the direction you guys are headed in. I love metro (Have a WP7 too, love it on there.) and with these changes and Visual Studio's awesomeness, I am quite happy to be working on this ecosystem.&lt;/p&gt;
+
+&lt;p&gt;Though, I do plan to make sure anything I ever write to be Cross-Platform (via Mono for C#) or in Node.js. While I am loving this, I am going to make sure I am never locked in.&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Installing Windows 8 on a Macbook Air</title>
