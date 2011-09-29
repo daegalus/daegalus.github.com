@@ -4,13 +4,65 @@
   <title>Loudberry</title>
   <link href="http://daegalus.github.com//atom.xml" rel="self"/>
   <link href="http://daegalus.github.com//"/>
-  <updated>2011-09-18T17:24:01-07:00</updated>
+  <updated>2011-09-28T23:54:03-07:00</updated>
   <id>http://daegalus.github.com//</id>
   <author>
     <name>Yulian Kuncheff</name>
     
   </author>
 
+  
+  <entry>
+    <title>Mailing Lists Need to Go</title>
+    <link href="http://daegalus.github.com//blog/2011/09/28/mailing-lists-need-to-go/"/>
+    <updated>2011-09-28T23:16:00-07:00</updated>
+    <id>http://daegalus.github.com//blog/2011/09/28/mailing-lists-need-to-go</id>
+    <content type="html">&lt;p&gt;One thing that really bugs me is the fact that open source projects or
+just projects in general are still using mailing lists as their
+primary form of communciation to the community and their users. The
+only downside is that with modern day technologies, mailing lists are
+pretty old news and the general users won't use them. No one wants
+their inbox spammed, the Web UIs for most are attrociously simple and
+messy, and no one is gonna bother going through the archives to find
+something.&lt;/p&gt;
+
+&lt;p&gt;Also, in order to do anything on the mailing list, you have to join
+it, and send messages, but in the process of joining, you will get so
+many more emails than you care for.&lt;/p&gt;
+
+&lt;p&gt;The time it takes you to setup a mailing list, you can setup a forum,
+which more people are willing to use. If you care about getting
+emails, most popular forums have subscriptions that will email you
+whenever someone replies, also email you digests and other things.&lt;/p&gt;
+
+&lt;p&gt;I just don't see why people are using draconian methods that limits
+their scope.&lt;/p&gt;
+
+&lt;p&gt;Now, a valid alternative is Google Groups. They have a nice
+middleground between Forum and Mailing list. It is not perfect, but
+much easier to use.&lt;/p&gt;
+
+&lt;p&gt;But I just think the term Mailing List needs to be stop being used for
+Google Groups. Many people see that and ignore it because they have
+the misconception that it is the old style mailing list. Either call
+it a Google Group, or use a proper forum.&lt;/p&gt;
+
+&lt;p&gt;The reason I am ranting about this, because I was sitting in IRC and a
+primary dev on a project was responding to a complaint of something
+being removed. He mentioned that he polled the mailing list to see
+others thoughts. THe problem is, I checked the mailing list, and it
+had about 40 people, when the software has 100s of people using it. I
+just thought that was completely stupid to think only poll a small
+mailing list to dictate the usage of a popular feature.&lt;/p&gt;
+
+&lt;p&gt;Btw, I will add, that I believe an IRC channel is more popular than a
+mailing lists. But if you are absolutely adamant about using a mailing
+list, please use Google Groups at the very least and link to it as
+Google Groups and not &quot;Mailing List&quot;.&lt;/p&gt;
+
+&lt;p&gt;I know many won't agree, but it bugs me, so hence this rant.&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Windows 8 Battery Life</title>
