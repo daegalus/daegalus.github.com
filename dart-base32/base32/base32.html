@@ -1,0 +1,289 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>base32 class / base32 Library / Dart Documentation</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        </head>
+        <body data-library="base32" data-type="base32">
+        <div class="page">
+        <div class="header">
+          <a href="../index.html"><div class="logo"></div></a>
+          <a href="../index.html">Dart Documentation</a>
+         &rsaquo; <a href="../base32.html">base32</a> &rsaquo; <a href="../base32/base32.html">base32</a>        <div id="search-box">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </div>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+</div>
+<div class="content">
+        <h2><strong>base32</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+class base32 {
+
+ /**
+  * Takes in a [byteList] converts it to a Uint8List so that I can run
+  * bit operations on it, then outputs a [String] representation of the
+  * base32.
+  */
+ String encode(List bytesList) {
+   var bytes = new Uint8List(bytesList.length);
+   bytes.setRange(0, bytes.length, bytesList, 0);
+   int i = 0, index = 0, digit = 0;
+   int currByte, nextByte;
+   String base32 = '';
+
+   while(i &lt; bytes.length) {
+     currByte = bytes[i];
+
+     if(index &gt; 3) {
+       if((i+1) &lt; bytes.length) {
+         nextByte = bytes[i + 1];
+       } else {
+         nextByte = 0;
+       }
+
+       digit = currByte &amp; (0xFF &gt;&gt; index);
+       index = (index+5)%8;
+       digit &lt;&lt;= index;
+       digit |= nextByte &gt;&gt; (8 - index);
+       i++;
+     } else {
+       digit = (currByte &gt;&gt; (8 - (index +5)) &amp; 0x1F);
+       index = (index+5)%8;
+       if(index==0) {
+         i++;
+       }
+     }
+     base32 = base32.concat(_base32Chars[digit]);
+   }
+   return base32;
+ }
+
+ /**
+  * Takes in a [hex] string, converts the string to a byte list
+  * and runs a normal encode() on it. Returning a [String] representation
+  * of the base32.
+  */
+ String encodeHexString(String hex) {
+   var bytes = _hexStringToBytes(hex);
+   return encode(bytes);
+ }
+
+ /**
+  * Takes in a [base32] string and decodes it back to a [Uint8List] that can be
+  * converted to a hex string using Crypto.bytesToHex()
+  */
+ Uint8List decode(String base32) {
+   int index = 0, lookup, offset = 0, digit;
+   Uint8List bytes = new Uint8List(base32.length*5~/8);
+   for(int i = 0; i &lt; bytes.length; i++) {
+     bytes[i] = 0;
+   }
+
+   for(int i=0; i &lt; base32.length; i++) {
+     lookup = base32.charCodeAt(i) - '0'.charCodeAt(0);
+     if(lookup &lt; 0 || lookup &gt;= _base32Lookup.length) {
+       continue;
+     }
+
+     digit = _base32Lookup[lookup];
+     if(digit == 0xFF) {
+       continue;
+     }
+
+     if(index &lt;= 3) {
+       index = (index+5)%8;
+       if(index == 0) {
+         bytes[offset] |= digit;
+         offset++;
+         if(offset &gt;= bytes.length) {
+           break;
+         }
+       } else {
+         bytes[offset] |= digit &lt;&lt; (8-index);
+       }
+     } else {
+       index = (index+5)%8;
+       bytes[offset] |= (digit &gt;&gt; index);
+       offset++;
+
+       if(offset &gt;= bytes.length) {
+         break;
+       }
+
+       bytes[offset] |= digit &lt;&lt; (8-index);
+     }
+   }
+   return bytes;
+ }
+
+ Uint8List _hexStringToBytes(hex) {
+   Uint8List bytes = new Uint8List(hex.length~/2);
+   for(int i=0; i &lt; hex.length; i+=2) {
+     var hexBit = "0x${hex[i]}${hex[i+1]}";
+     int parsed = int.parse(hexBit);
+     bytes[i~/2] = parsed;
+   }
+   return bytes;
+ }
+
+ const _base32Chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
+ const _base32Lookup = const [0xFF,0xFF,0x1A,0x1B,0x1C,0x1D,0x1E,0x1F, // '0', '1', '2', '3', '4', '5', '6', '7'
+                             0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF, // '8', '9', ':', ';', '&lt;', '=', '&gt;', '?'
+                             0xFF,0x00,0x01,0x02,0x03,0x04,0x05,0x06, // '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G'
+                             0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D,0x0E, // 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O'
+                             0x0F,0x10,0x11,0x12,0x13,0x14,0x15,0x16, // 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W'
+                             0x17,0x18,0x19,0xFF,0xFF,0xFF,0xFF,0xFF, // 'X', 'Y', 'Z', '[', '\', ']', '^', '_'
+                             0xFF,0x00,0x01,0x02,0x03,0x04,0x05,0x06, // '`', 'a', 'b', 'c', 'd', 'e', 'f', 'g'
+                             0x07,0x08,0x09,0x0A,0x0B,0x0C,0x0D,0x0E, // 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o'
+                             0x0F,0x10,0x11,0x12,0x13,0x14,0x15,0x16, // 'p', 'q', 'r', 's', 't', 'u', 'v', 'w'
+                             0x17,0x18,0x19,0xFF,0xFF,0xFF,0xFF,0xFF  // 'x', 'y', 'z', '{', '|', '}', '~', 'DEL'
+                             ];
+}
+</pre>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="decode">
+<button class="show-code">Code</button>
+Uint8List <strong>decode</strong>(String base32) <a class="anchor-link" href="#decode"
+              title="Permalink to base32.decode">#</a></h4>
+<div class="doc">
+<p>Takes in a 
+<span class="param">base32</span> string and decodes it back to a <code>Uint8List</code> that can be
+converted to a hex string using Crypto.bytesToHex()</p>
+<pre class="source">
+Uint8List decode(String base32) {
+ int index = 0, lookup, offset = 0, digit;
+ Uint8List bytes = new Uint8List(base32.length*5~/8);
+ for(int i = 0; i &lt; bytes.length; i++) {
+   bytes[i] = 0;
+ }
+
+ for(int i=0; i &lt; base32.length; i++) {
+   lookup = base32.charCodeAt(i) - '0'.charCodeAt(0);
+   if(lookup &lt; 0 || lookup &gt;= _base32Lookup.length) {
+     continue;
+   }
+
+   digit = _base32Lookup[lookup];
+   if(digit == 0xFF) {
+     continue;
+   }
+
+   if(index &lt;= 3) {
+     index = (index+5)%8;
+     if(index == 0) {
+       bytes[offset] |= digit;
+       offset++;
+       if(offset &gt;= bytes.length) {
+         break;
+       }
+     } else {
+       bytes[offset] |= digit &lt;&lt; (8-index);
+     }
+   } else {
+     index = (index+5)%8;
+     bytes[offset] |= (digit &gt;&gt; index);
+     offset++;
+
+     if(offset &gt;= bytes.length) {
+       break;
+     }
+
+     bytes[offset] |= digit &lt;&lt; (8-index);
+   }
+ }
+ return bytes;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="encode">
+<button class="show-code">Code</button>
+String <strong>encode</strong>(List bytesList) <a class="anchor-link" href="#encode"
+              title="Permalink to base32.encode">#</a></h4>
+<div class="doc">
+<p>Takes in a <code>byteList</code> converts it to a Uint8List so that I can run
+bit operations on it, then outputs a <code>String</code> representation of the
+base32.</p>
+<pre class="source">
+String encode(List bytesList) {
+ var bytes = new Uint8List(bytesList.length);
+ bytes.setRange(0, bytes.length, bytesList, 0);
+ int i = 0, index = 0, digit = 0;
+ int currByte, nextByte;
+ String base32 = '';
+
+ while(i &lt; bytes.length) {
+   currByte = bytes[i];
+
+   if(index &gt; 3) {
+     if((i+1) &lt; bytes.length) {
+       nextByte = bytes[i + 1];
+     } else {
+       nextByte = 0;
+     }
+
+     digit = currByte &amp; (0xFF &gt;&gt; index);
+     index = (index+5)%8;
+     digit &lt;&lt;= index;
+     digit |= nextByte &gt;&gt; (8 - index);
+     i++;
+   } else {
+     digit = (currByte &gt;&gt; (8 - (index +5)) &amp; 0x1F);
+     index = (index+5)%8;
+     if(index==0) {
+       i++;
+     }
+   }
+   base32 = base32.concat(_base32Chars[digit]);
+ }
+ return base32;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="encodeHexString">
+<button class="show-code">Code</button>
+String <strong>encodeHexString</strong>(String hex) <a class="anchor-link" href="#encodeHexString"
+              title="Permalink to base32.encodeHexString">#</a></h4>
+<div class="doc">
+<p>Takes in a 
+<span class="param">hex</span> string, converts the string to a byte list
+and runs a normal encode() on it. Returning a <code>String</code> representation
+of the base32.</p>
+<pre class="source">
+String encodeHexString(String hex) {
+ var bytes = _hexStringToBytes(hex);
+ return encode(bytes);
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        
+        <div class="footer">
+          <div>This page was generated at 2012-12-13 22:55:02.721</div>
+        </div>
+        <script async src="../client-live-nav.js"></script>
+        </body></html>
+        

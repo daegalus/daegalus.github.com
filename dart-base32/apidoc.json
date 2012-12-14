@@ -1,0 +1,122 @@
+
+[
+  {
+    "kind": "library",
+    "name": "base32",
+    "children": [
+      {
+        "superclass": {
+          "name": "Object",
+          "refId": "Object"
+        },
+        "kind": "class",
+        "name": "base32",
+        "children": [
+          {
+            "returnType": {
+              "name": "String",
+              "refId": "String"
+            },
+            "kind": "method",
+            "comment": "\nTakes in a [byteList] converts it to a Uint8List so that I can run\nbit operations on it, then outputs a [String] representation of the\nbase32.\n\n",
+            "name": "encode",
+            "children": [
+              {
+                "ref": {
+                  "name": "List",
+                  "refId": "List"
+                },
+                "kind": "param",
+                "name": "bytesList",
+                "id": "bytesList"
+              }
+            ],
+            "id": "encode1()"
+          },
+          {
+            "returnType": {
+              "name": "String",
+              "refId": "String"
+            },
+            "kind": "method",
+            "comment": "\nTakes in a [hex] string, converts the string to a byte list\nand runs a normal encode() on it. Returning a [String] representation\nof the base32.\n\n",
+            "name": "encodeHexString",
+            "children": [
+              {
+                "ref": {
+                  "name": "String",
+                  "refId": "String"
+                },
+                "kind": "param",
+                "name": "hex",
+                "id": "hex"
+              }
+            ],
+            "id": "encodeHexString1()"
+          },
+          {
+            "returnType": {
+              "name": "Uint8List",
+              "refId": "Uint8List"
+            },
+            "kind": "method",
+            "comment": "\nTakes in a [base32] string and decodes it back to a [Uint8List] that can be\nconverted to a hex string using Crypto.bytesToHex()\n\n",
+            "name": "decode",
+            "children": [
+              {
+                "ref": {
+                  "name": "String",
+                  "refId": "String"
+                },
+                "kind": "param",
+                "name": "base32",
+                "id": "base32"
+              }
+            ],
+            "id": "decode1()"
+          },
+          {
+            "returnType": {
+              "name": "Uint8List",
+              "refId": "Uint8List"
+            },
+            "kind": "method",
+            "name": "_hexStringToBytes",
+            "children": [
+              {
+                "ref": {
+                  "name": "dynamic",
+                  "refId": "dynamic"
+                },
+                "kind": "param",
+                "name": "hex",
+                "id": "hex"
+              }
+            ],
+            "id": "_hexStringToBytes1()"
+          },
+          {
+            "ref": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "property",
+            "name": "_base32Chars",
+            "id": "_base32Chars"
+          },
+          {
+            "ref": {
+              "name": "dynamic",
+              "refId": "dynamic"
+            },
+            "kind": "property",
+            "name": "_base32Lookup",
+            "id": "_base32Lookup"
+          }
+        ],
+        "id": "base32"
+      }
+    ],
+    "id": "file:///Users/yulian/Projects/dart-base32/lib/base32.dart"
+  }
+]

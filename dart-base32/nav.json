@@ -1,0 +1,1 @@
+[{"name":"base32","types":[{"name":"base32","kind":"class","members":[{"kind":"method","name":"decode"},{"kind":"method","name":"encode"},{"kind":"method","name":"encodeHexString"}]}]}]
